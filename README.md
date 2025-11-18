@@ -3,7 +3,21 @@
 </p>
 
 # Multi-Task Test-Time Adaptation
+This is the official implementation of the paper Multi-Task Test-time Adaptation via Gradient Consensus and Plasticity Constraint, accepted at AAAI 2026.
+| [View paper](Paper/CameraReady_v3.pdf)| [Appendix](Paper/Appendix_v3.pdf) |
+| ------------------------------------  |  -------------------------------  | 
+
+This repository also includes other multi-task test-time adaptation algorithms.
+| Algorithms |
+| ---------- |
+|  M-TENT    |
+|  M-EATA    |
+|  M-SAR     |
+|  M-ActMAD  |
+
+## Definition
 Multi-task test-time adaptation (MT-TTA) aims to adapt pre-trained models to dynamic environments during multi-task inference by leveraging unlabeled test data.
+
 
 ![The Framework of CoCo](framework_cmyk.jpg)
 
@@ -26,7 +40,7 @@ conda env create -f environment.yml -n MT_TTA
 ![The Corruption Validation on CelebA](Corruption.png)
 ### Dataset Acquisition
 [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and [PlantData](https://pan.baidu.com/s/1wPhu7GjyMinLeDJbKGbFPw?pwd=kukn), which constructed based on [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset) and [Rice Plant Disease Dataset](https://github.com/MHassaanButt/Rice-Disease-Classfication)
-
+Tips: Please ensure that you appropriately cite both Plantvillage and Rice Plant Disease Dataset while using PlantData in your reaserch.
 | Datasets   |  Total  |  Train  |  Test  | Tasks |
 |------------|---------|-------- |--------| ----- |
 | CelebA     | 202,599 | 141,819 | 60,780 |   4   |
@@ -34,6 +48,20 @@ conda env create -f environment.yml -n MT_TTA
 
 ### Dataset Processing
 Please place the datasets in the /Datasetsfolder. Refer to the following structure:
+```
+MT_TTA
+└── Datasets
+    ├── PlantData
+    │   ├── balanced_test.csv
+    │   ├── balanced_train.csv
+    │   ├── data.md
+    │   ├── data_description_image
+    │   └── pictures
+    └── CelebA
+        ├── identity_CelebA.txt
+        ├── img_align_celeba.zip
+        └── img_align_celeba
+```
 
 ## Usage of Multi-Task Test-Time Domain Adaptation Algorithms
 

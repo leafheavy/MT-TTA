@@ -3,6 +3,21 @@
 </p>
 
 # 多任务测试时域适应
+该项目是接收于 AAAI 2026 的论文 *Multi-Task Test-time Adaptation via Gradient Consensus and Plasticity Constraint* 的代码实现.
+| [正文](Paper/CameraReady_v3.pdf) | [附录](Paper/Appendix_v3.pdf) |
+| -------------------------------  |  ---------------------------- | 
+
+该项目还实现了如下 Test-time adaptation 算法的多任务版本.
+| Algorithms |
+| ---------- |
+|  M-TENT    |
+|  M-EATA    |
+|  M-SAR     |
+|  M-ActMAD  |
+
+## Definition
+Multi-task test-time adaptation (MT-TTA) aims to adapt pre-trained models to dynamic environments during multi-task inference by leveraging unlabeled test data.
+
 多任务测试时域适应 (MT-TTA) 旨在使得多任务预训练模型在进行测试/推理时, 通过对没有标签的样本即可良好地适应环境的动态变化.
 
 ![The Framework of CoCo](framework_cmyk.jpg)
@@ -26,6 +41,7 @@ conda env create -f environment.yml -n MT_TTA
 ![The Corruption Validation on CelebA](Corruption.png)
 ### 数据集获取
 [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) 和 [PlantData](https://pan.baidu.com/s/1wPhu7GjyMinLeDJbKGbFPw?pwd=kukn), 其基于 [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset) and [Rice Plant Disease Dataset](https://github.com/MHassaanButt/Rice-Disease-Classfication) 构建, 详情请见附录.
+Tips: 若使用 PlantData, 请保证对 PlantVillage 和 Rice Plant Disease Dataset 的正确引用.
 
 | 数据集     |   总数  |  训练集  | 测试集 | 任务数 |
 |------------|---------|-------- |--------| ----- |
@@ -34,6 +50,20 @@ conda env create -f environment.yml -n MT_TTA
 
 ### 数据集处理
 请将数据集置于 /Datasets 文件夹下, 参考格式如下:
+```
+MT_TTA
+└── Datasets
+    ├── PlantData
+    │   ├── balanced_test.csv
+    │   ├── balanced_train.csv
+    │   ├── data.md
+    │   ├── data_description_image
+    │   └── pictures
+    └── CelebA
+        ├── identity_CelebA.txt
+        ├── img_align_celeba.zip
+        └── img_align_celeba
+```
 
 ## 多任务测试时域适应算法的使用
 
