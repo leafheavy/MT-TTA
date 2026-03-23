@@ -7,13 +7,14 @@ This is the official implementation of the paper Multi-Task Test-time Adaptation
 | [View paper](Paper/CameraReady_v3.pdf)| [Appendix](Paper/Appendix_v3.pdf) |
 | ------------------------------------  |  -------------------------------  | 
 
-This repository also includes other multi-task test-time adaptation algorithms.
+This repository also includes other multi-task test-time adaptation algorithms, which is greatly inspired by (heavily from) the [Tent 🔗](https://github.com/DequanWang/tent), [EATA 🔗](https://github.com/mr-eggplant/EATA/tree/main), [SAR 🔗](https://github.com/mr-eggplant/SAR), and [ActMAD 🔗](https://github.com/jmiemirza/ActMAD).
 | Algorithms |
 | ---------- |
 |  M-TENT    |
 |  M-EATA    |
 |  M-SAR     |
 |  M-ActMAD  |
+
 
 ## Definition
 Multi-task test-time adaptation (MT-TTA) aims to adapt pre-trained models to dynamic environments during multi-task inference by leveraging unlabeled test data.
@@ -111,6 +112,14 @@ Please contact Zhong Ye by zhongye0312 [at] gmail.com 📬.
 
 # Citation
 If our work is helpful in your research, please consider citing our paper:
-
-
-
+```
+@inproceedings{ye2026multi,
+  title={Multi-Task Test-time Adaptation via Gradient Consensus and Plasticity Constraint},
+  author={Ye, Zhong and Hu, Yu and Yang, Zhenguo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={33},
+  pages={27836--27843},
+  year={2026}
+}
+```
