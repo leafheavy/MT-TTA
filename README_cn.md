@@ -7,7 +7,7 @@
 | [正文](Paper/CameraReady_v3.pdf) | [附录](Paper/Appendix_v3.pdf) |
 | -------------------------------  |  ---------------------------- | 
 
-该项目还实现了如下 Test-time adaptation 算法的多任务版本.
+该项目还实现了如下 Test-time adaptation 算法的多任务版本. 该项目基于 [Tent 🔗](https://github.com/DequanWang/tent), [EATA 🔗](https://github.com/mr-eggplant/EATA/tree/main), [SAR 🔗](https://github.com/mr-eggplant/SAR), 和 [ActMAD 🔗](https://github.com/jmiemirza/ActMAD) 启发.
 | Algorithms |
 | ---------- |
 |  M-TENT    |
@@ -114,3 +114,14 @@ Tips: 可直接参考 main.py 脚本
 
 # 引用
 如果我们的工作对您的研究有所帮助, 请考虑进行引用:
+```
+@inproceedings{ye2026multi,
+  title={Multi-Task Test-time Adaptation via Gradient Consensus and Plasticity Constraint},
+  author={Ye, Zhong and Hu, Yu and Yang, Zhenguo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={33},
+  pages={27836--27843},
+  year={2026}
+}
+```
